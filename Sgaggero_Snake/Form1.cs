@@ -96,7 +96,11 @@
             }
             public void ColoraSnake()
             {
-                for (int r = 0; r < righe; r++)
+            if (dataGridView1.Rows.Count == 0)
+            {
+                return;
+            }
+            for (int r = 0; r < righe; r++)
                 {
                     for (int c = 0; c < colonne; c++)
                     {
@@ -116,8 +120,11 @@
                 }
             public void GeneraCibo()
             {
-
-                Point puntoCasuale = new Point();
+            if (dataGridView1.Rows.Count == 0)
+            {
+                return;
+            }
+            Point puntoCasuale = new Point();
 
                 do
                 {
